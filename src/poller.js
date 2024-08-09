@@ -181,10 +181,10 @@ class Poller {
                     console.log(err)
                 }
                 if (row) {
-                    let artist = row['Artist'].toUpperCase();
-                    let track = row['Track'].toUpperCase();
-                    let label = row['Label'].toUpperCase();
-                    let remix = row['Mix'].toUpperCase();
+                    let artist = row['Artist'];
+                    let track = row['Track'];
+                    let label = row['Label'];
+                    let remix = row['Mix'];
                     let artwork = row['Artwork'];
                     let imageDataUrl = null;
                     if (remix) {
