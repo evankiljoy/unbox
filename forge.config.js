@@ -37,18 +37,18 @@ module.exports = {
                 "config": {}
             }
         ],
-        "osxSign": {
-            "identity": "Developer ID Application: Erik Larson (2H2K93RATM)",
-            "hardened-runtime": true,
-            "entitlements": "entitlements.plist",
-            "entitlements-inherit": "entitlements.plist",
-            "signature-flags": "library"
-        },
-        osxNotarize: {
-            appleId,
-            appleIdPassword,
-            teamId: teamId
-        },
+        // "osxSign": {
+        //     "identity": "Developer ID Application: Erik Larson (2H2K93RATM)",
+        //     "hardened-runtime": true,
+        //     "entitlements": "entitlements.plist",
+        //     "entitlements-inherit": "entitlements.plist",
+        //     "signature-flags": "library"
+        // },
+        // osxNotarize: {
+        //     appleId,
+        //     appleIdPassword,
+        //     teamId: teamId
+        // },
         "icon": "logo.icns",
         "asar": true,
         "arch": [
