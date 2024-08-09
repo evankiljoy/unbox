@@ -9,7 +9,6 @@
     "start": "npm run build:renderer && electron-forge start",
     "package": "electron-forge package --arch universal",
     "make": "electron-forge make --arch universal",
-    "publish": "electron-forge publish",
     "build:renderer": "webpack",
     "watch:renderer": "webpack serve",
     "build:tailwind": "tailwindcss build src/tailwind.css -o public/tailwind.css"
