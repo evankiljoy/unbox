@@ -1,0 +1,40 @@
+name: Build macOS Universal Binary
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Specify the Node.js version you want to use
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project for x86_64
+        run: npx pkg . --targets=node18-macos-x64 --output=unbox-macos-x64
+
+      - name: Build project for arm64
+        run: npx pkg . --targets=node18-macos-arm64 --output=unbox-macos-arm64
+
+      - name: Combine binaries into a universal binary
+        run: lipo -create -output unbox-macos-universal unbox-macos-x64 unbox-macos-arm64
+
+      - name: Upload universal binary as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: macos-universal-binary
+          path: ./unbox-macos-universal
