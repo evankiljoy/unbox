@@ -8,7 +8,7 @@
   "scripts": {
     "start": "npm run build:renderer && electron-forge start",
     "package": "electron-forge package --arch universal",
-    "make": "electron-forge make --arch arm64",
+    "make": "electron-forge make --arch universal",
     "publish": "electron-forge publish",
     "build:renderer": "webpack",
     "watch:renderer": "webpack serve",
