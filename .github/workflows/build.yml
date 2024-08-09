@@ -1,4 +1,4 @@
-pythname: Build macOS Universal Binary
+name: Build macOS Universal Binary
 
 on:
   push:
