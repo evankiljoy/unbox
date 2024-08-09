@@ -1,4 +1,4 @@
-name: Build macOS Universal Binary
+pythname: Build macOS Universal Binary
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install setuptools
-        run: brew install setuptools
+        run: brew install python-setuptools
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
